@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BookLore 隐私政策 / Privacy Policy</title>
+<meta name="description" content="BookLore 阅读器不收集任何数据。No data is collected by the BookLore reader app.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --ink: #16181d;
+    --muted: #5c636e;
+    --line: #dfe3e8;
+    --page: #ffffff;
+    --accent: #0b6bcb;
+    --note: #f4f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8eaed;
+      --muted: #9aa2ad;
+      --line: #2c3138;
+      --page: #16181d;
+      --accent: #6cb0ff;
+      --note: #1e2126;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+    background: var(--page);
+    color: var(--ink);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 .35rem; }
+  h2 {
+    font-size: 1.1rem; margin: 2.4rem 0 .6rem;
+    padding-top: 1.2rem; border-top: 1px solid var(--line);
+  }
+  h3 { font-size: .98rem; margin: 1.4rem 0 .3rem; }
+  p, li { margin: .5rem 0; }
+  ul { padding-left: 1.35rem; }
+  .sub { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .lede {
+    background: var(--note); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: .85rem 1rem; margin: 1.2rem 0 0;
+  }
+  .lede p { margin: .2rem 0; }
+  code {
+    font: .88em/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--note); padding: .1em .35em; border-radius: 4px;
+  }
+  a { color: var(--accent); }
+  .en { margin-top: 3.5rem; }
+  .en h2:first-of-type { border-top: 1px solid var(--line); }
+  footer {
+    margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>BookLore 隐私政策</h1>
+<p class="sub">生效日期：2026 年 9 月 28 日 &nbsp;·&nbsp; 最近更新：2026 年 9 月 28 日</p>
+
+<div class="lede">
+  <p><strong>一句话：BookLore 不收集你的任何数据。</strong></p>
+  <p>没有账号体系，没有分析统计，没有广告，没有第三方 SDK。App 只连接<strong>你自己填写的
+  BookLore 服务器地址</strong>，开发者收不到任何关于你的信息。</p>
+</div>
+
+<h2>1. 我们收集什么</h2>
+<p><strong>不收集任何数据。</strong>具体地说：</p>
+<ul>
+  <li>不收集设备标识、位置、通讯录、日历、照片、麦克风、相机、健康或任何其他系统数据；</li>
+  <li>不收集阅读行为、书库内容或使用统计；</li>
+  <li>不申请相机、麦克风、定位、通讯录、健康、追踪（ATT）等任何权限——App 的
+      <code>Info.plist</code> 里没有任何 <code>NS*UsageDescription</code> 声明；</li>
+  <li>不进行跨 App 或跨网站追踪（<code>NSPrivacyTracking = false</code>）。</li>
+</ul>
+<p>App 内置的隐私清单（<code>PrivacyInfo.xcprivacy</code>）中，<code>NSPrivacyCollectedDataTypes</code>
+为空数组。这份文档与该清单一致。</p>
+
+<h2>2. 你的数据存在哪里</h2>
+
+<h3>2.1 只在这台设备上</h3>
+<p>以下内容保存在 App 自己的沙盒里，不会离开这台设备：</p>
+<ul>
+  <li>导入或下载到本机的书籍文件、解压后的渲染缓存、封面缩略图；</li>
+  <li>阅读进度、书签、高亮与标注、笔记、阅读历史、阅读时长；</li>
+  <li>本地书架（设备私有，不向服务器同步）；</li>
+  <li>阅读设置：主题、字体、字号、行距、页边距、翻页方式、朗读设置等；</li>
+  <li>你填写的服务器地址与用户名（<code>UserDefaults</code>）。</li>
+</ul>
+
+<h3>2.2 在系统钥匙串里</h3>
+<p>你的<strong>密码、访问令牌与刷新令牌</strong>保存在 iOS / iPadOS 的系统钥匙串（Keychain）中，
+不写入普通配置文件，也不离开设备。退出登录会清除它们。</p>
+
+<h3>2.3 在你自己的服务器上</h3>
+<p>如果你使用自建的 BookLore 服务器，书库内容、阅读进度、书签与标注会按你的设置同步到
+<strong>那台服务器</strong>。那台服务器由你自己部署和运维，数据的保管责任在你与它的运维者之间，
+与本 App 的开发者无关。</p>
+
+<h2>3. 网络连接</h2>
+<p>App 只会连接你在「服务器设置」里填写的那个地址，用于：登录、拉取书库列表、下载书籍文件、
+同步阅读进度与标注、投递阅读会话记录。</p>
+<p>此外没有任何其他出站连接：没有崩溃上报、没有统计上报、没有版本检查、没有广告请求。</p>
+<div class="lede">
+  <p><strong>关于明文 http：</strong>如果你的服务器地址是 <code>http://</code> 而不是
+  <code>https://</code>，密码与令牌会以明文经过网络。局域网内自建服务器用 http 是常见做法，
+  App 不会阻止你，但会在设置页上提示。在公共 Wi-Fi 下请改用 https。</p>
+</div>
+
+<h2>4. 权限与系统能力</h2>
+<ul>
+  <li><strong>相册</strong>：选择自定义封面或阅读背景图时使用系统选择器，App 不申请相册权限，
+      也无法读取你相册里的其他内容。</li>
+  <li><strong>电池</strong>：仅在阅读进度条上显示电量与充电状态时读取，用于显示，不记录、不外发。</li>
+  <li><strong>后台音频</strong>：仅在「锁屏 / 后台继续朗读」开启且正在朗读时使用，用于让语音在锁屏后继续。</li>
+  <li><strong>后台处理</strong>：用于在系统允许的时机完成书库同步。</li>
+  <li><strong>「文件」App</strong>：你可以通过「文件」把书放进 App 的文件夹，或从中导出书库备份。
+      这只在你主动操作时发生。</li>
+  <li><strong>本地网络</strong>：为了连接你局域网内的自建服务器。</li>
+</ul>
+<p>App <strong>不使用</strong>：相机、麦克风、定位、通讯录、日历、健康数据、蓝牙外设扫描、
+广告标识符。</p>
+
+<h2>5. 第三方</h2>
+<p>App <strong>不包含任何第三方 SDK</strong>——没有分析、没有广告、没有社交登录、没有崩溃收集平台。
+App 使用的开源组件及其许可证列在应用内的「开源许可」页面与随包的
+<code>THIRD-PARTY-NOTICES.txt</code> 中；这些组件都在本地运行，不会把数据发给它们的作者。</p>
+<p>本页面的托管方（GitHub Pages）会按其自身政策记录访问日志，这与 App 本身无关。</p>
+
+<h2>6. 儿童隐私</h2>
+<p>App 不面向儿童，也不会有意收集儿童的任何信息——事实上它不收集任何人的任何信息。
+如果家长或监护人发现相关疑问，可通过下方方式联系。</p>
+
+<h2>7. 你对数据的控制</h2>
+<ul>
+  <li><strong>删除全部本地数据</strong>：从设备上删除 App 即可。App 的沙盒与钥匙串条目会一并清除。</li>
+  <li><strong>清空阅读历史</strong>：书库工具 → 阅读历史 → 清空。</li>
+  <li><strong>退出登录</strong>：服务器设置 → 退出登录，会清除钥匙串中保存的密码与令牌。</li>
+  <li><strong>删除服务器上的数据</strong>：由你自己的服务器管理，与本 App 无关。</li>
+</ul>
+
+<h2>8. 本政策的变更</h2>
+<p>如果本政策有实质性变更，会更新本页面顶部的「最近更新」日期，并在 App 的更新说明中注明。
+本页面保留在版本控制中，历史版本可查。</p>
+
+<h2>9. 联系方式</h2>
+<p>与隐私相关的任何问题，请通过 GitHub Issues 提出：
+<a href="https://github.com/alexphoenix/booklore-privacy/issues">github.com/alexphoenix/booklore-privacy/issues</a>。</p>
+
+<section class="en" lang="en">
+<h1>BookLore — Privacy Policy</h1>
+<p class="sub">Effective 28 September 2026 &nbsp;·&nbsp; Last updated 28 September 2026</p>
+
+<div class="lede">
+  <p><strong>In one sentence: BookLore collects no data about you.</strong></p>
+  <p>There is no account, no analytics, no advertising and no third-party SDK. The app talks only to the
+  BookLore server <strong>you</strong> configure. Nothing reaches the developer.</p>
+</div>
+
+<h2>1. What we collect</h2>
+<p><strong>Nothing.</strong> No device identifiers, location, contacts, calendars, photos, microphone,
+camera, health data or usage statistics. The app requests no runtime permissions — its
+<code>Info.plist</code> declares no <code>NS*UsageDescription</code> keys — and performs no tracking
+across apps or websites (<code>NSPrivacyTracking = false</code>). The bundled privacy manifest lists an
+empty <code>NSPrivacyCollectedDataTypes</code> array, and this document matches it.</p>
+
+<h2>2. Where your data lives</h2>
+<ul>
+  <li><strong>On this device only:</strong> book files, rendering caches, cover thumbnails, reading
+      position, bookmarks, highlights and annotations, notes, reading history, device-private shelves,
+      and all reading settings. Your server address and username are kept in
+      <code>UserDefaults</code>.</li>
+  <li><strong>In the system keychain:</strong> your password, access token and refresh token. They are
+      never written to a plain file and never leave the device. Signing out erases them.</li>
+  <li><strong>On your own server:</strong> if you run a self-hosted BookLore server, your library,
+      reading progress, bookmarks and annotations sync to <em>that</em> server. It is yours to operate
+      and yours to secure; the app's developer has no access to it.</li>
+</ul>
+
+<h2>3. Network connections</h2>
+<p>The app connects only to the address you enter in Server Settings, and only to sign in, list the
+library, download books, sync progress and annotations, and report reading sessions. There are no
+other outbound requests: no crash reporting, no analytics, no update check, no ad requests.</p>
+<p><strong>Cleartext http:</strong> if your server address uses <code>http://</code> rather than
+<code>https://</code>, your password and tokens travel unencrypted. A self-hosted server on your own
+LAN is a common and reasonable choice — the app does not stop you, but it does say so on the settings
+screen. On public Wi-Fi, use https.</p>
+
+<h2>4. Permissions and system capabilities</h2>
+<ul>
+  <li><strong>Photos:</strong> choosing a custom cover or reading background uses the system picker.
+      The app requests no photo-library permission and cannot read anything else in your library.</li>
+  <li><strong>Battery:</strong> read only to display the level in the reader's progress strip. Not
+      recorded, not transmitted.</li>
+  <li><strong>Background audio:</strong> used only while "continue reading aloud on the lock screen"
+      is on and speech is playing.</li>
+  <li><strong>Background processing:</strong> used to finish a library sync when the system allows.</li>
+  <li><strong>Files:</strong> books can be placed in the app's folder, or the library exported, through
+      the Files app — only when you do it.</li>
+  <li><strong>Local network:</strong> to reach a self-hosted server on your LAN.</li>
+</ul>
+<p>The app does <strong>not</strong> use the camera, microphone, location, contacts, calendars, health
+data, Bluetooth peripheral scanning or the advertising identifier.</p>
+
+<h2>5. Third parties</h2>
+<p>The app contains <strong>no third-party SDK</strong> — no analytics, advertising, social login or
+crash-reporting service. The open-source components it uses are listed on the in-app "Open source
+notices" screen and in the bundled <code>THIRD-PARTY-NOTICES.txt</code>; they all run locally and send
+nothing to their authors.</p>
+<p>This page is hosted on GitHub Pages, which keeps access logs under its own policy. That is
+unrelated to the app.</p>
+
+<h2>6. Children's privacy</h2>
+<p>The app is not directed at children and does not knowingly collect information from anyone — in
+fact it collects no information from anybody. Parents or guardians with questions can use the contact
+below.</p>
+
+<h2>7. Your control over your data</h2>
+<ul>
+  <li><strong>Delete everything local:</strong> delete the app from your device. Its sandbox and
+      keychain entries go with it.</li>
+  <li><strong>Clear reading history:</strong> Library tools → Reading history → Clear.</li>
+  <li><strong>Sign out:</strong> Server settings → Sign out, which erases the password and tokens from
+      the keychain.</li>
+  <li><strong>Delete data on the server:</strong> that is your server's business, not the app's.</li>
+</ul>
+
+<h2>8. Changes to this policy</h2>
+<p>Material changes update the "last updated" date at the top of this page and are noted in the app's
+release notes. This page is version-controlled, so its history is available.</p>
+
+<h2>9. Contact</h2>
+<p>For any privacy question, please open an issue at
+<a href="https://github.com/alexphoenix/booklore-privacy/issues">github.com/alexphoenix/booklore-privacy/issues</a>.</p>
+</section>
+
+<footer>
+  BookLore 阅读器 / BookLore Reader · 本页面不加载任何外部资源，也不含统计脚本。<br>
+  This page loads no external resources and contains no analytics.
+</footer>
+
+</main>
+</body>
+</html>
